@@ -1,16 +1,426 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GeoPerfil de Datos – Versión 1.0.0</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    aside {
+      width: 250px;
+      background-color: #4A628F;
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    aside h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    aside nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    aside nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      margin-left: 260px;
+      padding: 2rem;
+      flex: 1;
+      background: #f8f8f8;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h1, h2, h3 {
+      color: #1a232e;
+    }
+	a {
+	  color: inherit;          
+	  text-decoration: underline; 
+	}
+
+	a:hover,
+	a:visited,
+	a:focus {
+	  color: inherit;          
+	  text-decoration: underline; 
+	}
+	
+	a:hover {
+	  font-style: italic;
+	}
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #ecf0f1;
+    }
+	
+	pre {
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: monospace;
+    }
+
+    a.prop-link {
+      color: #2980b9;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 2rem;
+      border: 1px solid #888;
+      width: 60%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      border-radius: 8px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+      aside {
+        display: none;
+      }
+      main {
+        margin-left: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>{{ page.title }}</h1>
-  </header>
-  <main>
-    {{ content }}
-  </main>
+
+<aside>
+  <h2>Contenidos</h2>
+  <nav>
+    <a href="#abstract">Abstract</a>
+    <a href="#introduccion">Introducción</a>
+    <a href="#contexto">Contexto</a>
+    <a href="#historial">Historial</a>
+    <a href="#entidades">Entidades</a>
+  </nav>
+</aside>
+
+<main>
+  <h1>Metadatos de conjuntos de datos de alto valor y servicios espaciales</h1>
+
+  <section id="abstract">
+    <h2>Resumen</h2>
+    <p>Descripción detallada de los elementos mínimos de metadatos para describir conjuntos de datos geoespaciales, servicios y series, facilitando su interoperabilidad.</p>
+  </section>
+
+  <section id="introduccion">
+    <h2>Introducción</h2>
+    <p>Describe los elementos de metadatos geoespaciales que lleva asociado un producto.</p>
+  </section>
+
+  <section id="contexto">
+    <h2>Contexto normativo</h2>
+	<ul>
+	  <li>Directiva Inspire 2007/2/CE1 establece las reglas generales para la formación de una Infraestructura de Datos Espaciales en la Comunidad Europea.</li>
+	  <li>Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España (LISIGE).</li>
+	  <li>Reglamento (CE) Nº 1205/2008 en lo que se refiere a los metadatos.</li>
+	  <li>Corrección de errores del Reglamento (CE) Nº 1205/2008.</li>
+	  <li>Directrices Técnicas sobre metadatos.</li>
+	  <li>Reglamento (UE) Nº 1089/201013 en lo que se refiere a la interoperabilidad de los conjuntos y los servicios de datos espaciales.</li>
+	</ul>
+  </section>
+
+  <section id="historial">
+    <h2>Historial de Revisiones</h2>
+    <ul>
+      <li>0.0.1 - Sep 2025 - Primera versión, borrador</li>
+    </ul>
+  </section>
+
+  <section id="entidades">
+    <h2>Entidades Principales</h2>
+
+    <h3>Conjunto de datos</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Propiedad</th>
+          <th>Dominio</th>
+          <th>Cardinalidad</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+	    <tr>
+          <td><a class="prop-link" onclick="openModal('modalIdMD')">gmd:fileIdentifier</a></td>
+          <td>Texto libre</td>
+          <td>1</td>
+          <td>Identificador único del fichero de metadatos</td>
+        </tr>
+		<tr>
+          <td><a class="prop-link" onclick="openModal('modalLangMD')">gmd:language</a></td>
+          <td>Tres letras. Lista controlada de la ISO 639-2</td>
+          <td>1</td>
+          <td>Idioma de los metadatos</td>
+        </tr>
+		<tr>
+          <td><a class="prop-link" onclick="openModal('modalUTF')">gmd:characterSet</a></td>
+          <td><a href="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode" target="_blank">Lista controlada</a></td>
+          <td>1</td>
+          <td>Nombre del estándar de codificación de caracteres</td>
+        </tr>
+		<tr>
+          <td><a class="prop-link" onclick="openModal('modalHierarchy')">gmd:hierarchyLevel</a></td>
+          <td><a href="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ScopeCode" target="_blank">Lista controlada</a></td>
+          <td>1</td>
+          <td>Nivel jerárquico del recurso</td>
+        </tr>
+		<tr>
+          <td><a class="prop-link" onclick="openModal('modalLangMD')">gmd:contact</a></td>
+          <td>
+			  <p>gmd:oganisationName: Texto libre</p>
+			  <p>gmd:address: Texto libre</p>
+			  <p><a href="https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" target="_blank">CI_RoleCode: Lista controlada</a></p>
+		  </td>
+          <td>1</td>
+          <td>Punto de contacto de los metadatos.</td>
+        </tr>
+		<tr>
+          <td><a class="prop-link" onclick="openModal('modalFechaMD')">gmd:dateStamp</a></td>
+          <td>Formato de la norma ISO 8601 (año-mes-día/hora)</td>
+          <td>1</td>
+          <td>Fecha de los metadatos</td>
+        </tr>
+		<tr>
+          <td><a class="prop-link" onclick="openModal('modalNormaMD')">gmd:metadataStandardName</a></td>
+          <td>Texto libre</td>
+          <td>1</td>
+          <td>Nombre de la norma de metadatos</td>
+        </tr>
+		<tr>
+          <td><a class="prop-link" onclick="openModal('modalVersionMD')">gmd:metadataStandardVersion</a></td>
+          <td>Texto libre</td>
+          <td>1</td>
+          <td>Versión de la norma de metadatos</td>
+        </tr>
+        <tr>
+          <td><a class="prop-link" onclick="openModal('modalTitle')">gmd:title</a></td>
+          <td>Texto libre</td>
+          <td>1</td>
+          <td>Título del conjunto de datos</td>
+        </tr>
+        <tr>
+          <td><a class="prop-link" onclick="openModal('modalDescription')">gmd:abstract</a></td>
+          <td>Texto libre</td>
+          <td>1</td>
+          <td>Resumen del conjunto de datos</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Servicios</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Propiedad</th>
+          <th>Dominio</th>
+          <th>Cardinalidad</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a class="prop-link" onclick="openModal('modalServiceTitle')">V_ServiceIdentification.serviceType</a></td>
+          <td>Literal</td>
+          <td>1..1</td>
+          <td>Nombre del servicio</td>
+        </tr>
+        <tr>
+          <td><a class="prop-link" onclick="openModal('modalEndpoint')">dcat:endpointURL</a></td>
+          <td>URI</td>
+          <td>1..1</td>
+          <td>URL del endpoint del servicio</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tu Organización. Todos los derechos reservados.</p>
+  </footer>
+</main>
+
+<!-- Modales -->
+
+<div id="modalIdMD" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalTitle')">&times;</span>
+    <h2>gmd:fileIdentifier</h2>
+	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:fileIdentifier</p>
+    <p><strong>Descripción:</strong>
+		<tr>
+			<td>Identificador único del fichero de metadatos.</td>
+			<td>Es un texto libre.</td>
+			<td>La unicidad puede completarse:
+				<p>• Utilizando el Identificador Único Universal (UUID) que se presenta en 5 grupos separados por guiones, en la forma 8-4-4-4-12 para un total de 36 caracteres (32 caracteres hexadecimales y 4 guiones), xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxx. e.g: 123e4567-e89b-12d3-a456-426655440000.</p>
+				<p>• GeoNetwork asigna por defecto un UUID al elemento fileIdentifier.</p>
+				<p>• En el caso de crear los metadatos con otra herramienta o de forma manual se incluye los identificadores de los ficheros manualmente y suele seguir el siguiente criterio: country_producer_product_theme</p>
+			</td>
+			<td>Nota: No usar el identificador para describir el recurso, no es necesario incluir fechas.</td>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:fileIdentifier&gt;
+				  &lt;gco:CharacterString>spaignLLM&lt;/gco:CharacterString&gt;
+			&lt;/gmd:fileIdentifier&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+
+<div id="modalIdMD" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalTitle')">&times;</span>
+    <h2>gmd:fileIdentifier</h2>
+	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:fileIdentifier</p>
+    <p><strong>Descripción:</strong>
+		<tr>
+			<td>Identificador único del fichero de metadatos.</td>
+			<td>Es un texto libre.</td>
+			<td>La unicidad puede completarse:
+				<p>• Utilizando el Identificador Único Universal (UUID) que se presenta en 5 grupos separados por guiones, en la forma 8-4-4-4-12 para un total de 36 caracteres (32 caracteres hexadecimales y 4 guiones), xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxx. e.g: 123e4567-e89b-12d3-a456-426655440000.</p>
+				<p>• GeoNetwork asigna por defecto un UUID al elemento fileIdentifier.</p>
+				<p>• En el caso de crear los metadatos con otra herramienta o de forma manual se incluye los identificadores de los ficheros manualmente y suele seguir el siguiente criterio: country_producer_product_theme</p>
+			</td>
+			<td>Nota: No usar el identificador para describir el recurso, no es necesario incluir fechas.</td>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:fileIdentifier&gt;
+				  &lt;gco:CharacterString>spaignLLM&lt;/gco:CharacterString&gt;
+			&lt;/gmd:fileIdentifier&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+
+<div id="modalDescription" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalDescription')">&times;</span>
+    <h2>dct:description</h2>
+    <p><strong>Descripción:</strong> Resumen textual que explica el contenido y propósito del conjunto de datos.</p>
+    <p><strong>Ejemplo:</strong> "Este conjunto proporciona medidas diarias de partículas PM10 y PM2.5."</p>
+  </div>
+</div>
+
+<div id="modalTheme" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalTheme')">&times;</span>
+    <h2>dcat:theme</h2>
+    <p><strong>Descripción:</strong> Tema del conjunto de datos según un vocabulario controlado, como EuroVoc.</p>
+    <p><strong>Ejemplo:</strong> <code>http://eurovoc.europa.eu/100141</code> (Medio ambiente)</p>
+  </div>
+</div>
+
+<div id="modalServiceTitle" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalServiceTitle')">&times;</span>
+    <h2>dct:title (Data Service)</h2>
+    <p><strong>Descripción:</strong> Nombre del servicio de datos tal como debe mostrarse en un catálogo o visualizador.</p>
+    <p><strong>Ejemplo:</strong> "Servicio WMS de Ortofotos de Andalucía 2025"</p>
+    <p><strong>Nota:</strong> El título debe permitir a los usuarios identificar el servicio sin ambigüedad.</p>
+  </div>
+</div>
+
+<div id="modalEndpoint" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalEndpoint')">&times;</span>
+    <h2>dcat:endpointURL</h2>
+    <p><strong>Descripción:</strong> URI que proporciona acceso directo al servicio de datos (por ejemplo, a un WMS, WFS o API REST).</p>
+    <p><strong>Ejemplo:</strong> <code>https://geo.ejemplo.org/wms?</code></p>
+    <p><strong>Nota:</strong> Debe ser funcional, estable y directamente utilizable por software cliente.</p>
+  </div>
+</div>
+
+<!-- Script para manejar modales -->
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  // Cerrar modal haciendo clic fuera del contenido
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
