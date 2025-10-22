@@ -1,19 +1,24 @@
 ---
 layout: default
-title: GeoDCAT-AP 3.0.0
-permalink: /releases/3.0.0/
+title: Metadatos de conjuntos de datos de alto valor y servicios espaciales
+permalink: /releases/1.0/
 ---
 
-# GeoDCAT-AP 3.0.0
+# Metadatos de conjuntos de datos de alto valor y servicios espaciales
 
-## Abstract
+## Resumen
 
-GeoDCAT-AP es una extensión del perfil de aplicación DCAT para portales de datos en Europa, destinada a describir conjuntos de datos geoespaciales, series de conjuntos de datos y servicios.
+Incluye una descripción detallada de los elementos mínimos de metadatos del reglamento de metadatos para cumplir el Reglamento nº 1205/2008 de metadatos y el reglamento 2023/138 por el que se establecen una lista de conjuntos de datos específicos de alto valor y modalidades de publicación y reutilización.
 
 ## Introducción
 
-Este documento contiene la versión 3.0.0 de la especificación y los definidos en el marco de la Directiva INSPIRE.
+Este documento describe los elementos de metadatos geoespaciales que lleva asociado la catalogación de los conjuntos de datos de alto valor y servicios espaciales según los elementos de metadatos establecidos en el Reglamento (CE) nº 1205/2008 de la Comisión Europea.
 
 ## Contexto
 
-Con el objetivo de fomentar la transformación digital de Europa, la Comisión Europea está invirtiendo en marcos y acuerdos para proporcionar a los gobiernos y empresas los recursos adecuados para digitalizar sus servicios. Esto incluye bloques de construcción disponibles para crear un mercado único de datos, donde los datos fluyen libremente dentro de la UE y entre sectores para el beneficio de empresas, investigadores y administraciones públicas.
+- Directiva Inspire 2007/2/CE1 establece las reglas generales para la formación de una Infraestructura de Datos Espaciales en la Comunidad Europea.
+- Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España (LISIGE).
+- Reglamento (CE) Nº 1205/2008 en lo que se refiere a los metadatos.
+- Corrección de errores del Reglamento (CE) Nº 1205/2008.
+- Directrices Técnicas sobre metadatos.
+- Reglamento (UE) Nº 1089/201013 en lo que se refiere a la interoperabilidad de los conjuntos y los servicios de datos espaciales.
